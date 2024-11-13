@@ -93,3 +93,87 @@
 </footer>
 
 {% include wechat-widget.html %}
+<!--<footer class="site-footer"> &lt;!&ndash; 页面页脚的主要容器 &ndash;&gt;-->
+<!--  <div class="wrapper"> &lt;!&ndash; 用于包裹内容，使其居中对齐 &ndash;&gt;-->
+<!--    <div class="footer-col-wrapper"> &lt;!&ndash; 页脚列的包装器 &ndash;&gt;-->
+<!--      <div class="footer-col footer-col-1"> &lt;!&ndash; 第一列，显示联系信息 &ndash;&gt;-->
+<!--        <h4>CONTACT</h4> &lt;!&ndash; 标题：联系 &ndash;&gt;-->
+<!--        <div class="social-links"> &lt;!&ndash; 社交联系信息的容器 &ndash;&gt;-->
+<!--          {% for contact in site.footer.contact %} &lt;!&ndash; 遍历每个联系信息 &ndash;&gt;-->
+<!--          <div class="social-link contact-links"> &lt;!&ndash; 单个联系信息的容器 &ndash;&gt;-->
+<!--            {% assign contact_icon_path = "/assets/img/icons/" | append: contact.type | downcase | append: ".png" | absolute_url %} &lt;!&ndash; 生成联系图标的路径 &ndash;&gt;-->
+<!--            <img-->
+<!--                    src="{{ contact_icon_path }}" &lt;!&ndash; 联系图标的路径 &ndash;&gt;-->
+<!--            alt="{{ contact.type }}" &lt;!&ndash; 联系类型作为图片的提示文本 &ndash;&gt;-->
+<!--            />-->
+<!--            {% if contact.type == "email" %} &lt;!&ndash; 如果联系信息类型为邮件 &ndash;&gt;-->
+<!--            {% if contact.cloak != false %} &lt;!&ndash; 如果需要隐藏邮件地址 &ndash;&gt;-->
+<!--            {% assign email_parts = contact.value | split: "@" %} &lt;!&ndash; 拆分邮件地址到用户和域 &ndash;&gt;-->
+<!--            {% assign user = email_parts[0] %}-->
+<!--            {% assign domain = email_parts[1] | split: "." %}-->
+<!--            {% assign domain_name = domain[0] %}-->
+<!--            {% assign domain_tld = domain[1] %}-->
+<!--            {% assign reversed_user = user | split: "" | reverse | join: "" %} &lt;!&ndash; 反转用户名 &ndash;&gt;-->
+<!--            {% assign reversed_domain_name = domain_name | split: "" | reverse | join: "" %} &lt;!&ndash; 反转域名 &ndash;&gt;-->
+<!--            {% assign reversed_domain_tld = domain_tld | split: "" | reverse | join: "" %} &lt;!&ndash; 反转顶级域名 &ndash;&gt;-->
+<!--            <span-->
+<!--                    data-resu="{{ reversed_user }}" &lt;!&ndash; 反转后的用户名保存为data属性 &ndash;&gt;-->
+<!--            data-eman-niamod="{{ reversed_domain_name }}" &lt;!&ndash; 反转后的域名保存为data属性 &ndash;&gt;-->
+<!--            data-dlt-niamod="{{ reversed_domain_tld }}" &lt;!&ndash; 反转后的顶级域名保存为data属性 &ndash;&gt;-->
+<!--            id="{{ contact.type }}-link"-->
+<!--            class="link email-link-cloaked"-->
+<!--            >-->
+<!--            {{ contact.name }} &lt;!&ndash; 显示联系方式名称 &ndash;&gt;-->
+<!--            </span>-->
+<!--            {% else %}-->
+<!--            <a href="mailto:{{ contact.value }}" id="{{ contact.type }}-link"> &lt;!&ndash; 不隐藏时，直接生成邮件链接 &ndash;&gt;-->
+<!--              {{ contact.value }} &lt;!&ndash; 显示邮件地址 &ndash;&gt;-->
+<!--            </a>-->
+<!--            {% endif %}-->
+<!--            {% else %}-->
+<!--            <a href="{{ contact.link }}" id="{{ contact.type }}-link"> &lt;!&ndash; 不是邮件类型时的通用链接 &ndash;&gt;-->
+<!--              {% if contact.value and contact.value != "" and contact.value != nil %}-->
+<!--              {{ contact.value }} &lt;!&ndash; 如果有值，显示值 &ndash;&gt;-->
+<!--              {% else %}-->
+<!--              {{ contact.name }} &lt;!&ndash; 否则，显示名称 &ndash;&gt;-->
+<!--              {% endif %}-->
+<!--            </a>-->
+<!--            {% endif %}-->
+<!--          </div>-->
+<!--          {% endfor %}-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="footer-col footer-col-2"> &lt;!&ndash; 第二列，显示关注信息 &ndash;&gt;-->
+<!--        {% if site.footer.follow and site.footer.follow.size > 0 %} &lt;!&ndash; 如果有关注信息 &ndash;&gt;-->
+<!--        <h4>FOLLOW</h4> &lt;!&ndash; 标题：关注 &ndash;&gt;-->
+<!--        <div class="social-links follow-links"> &lt;!&ndash; 关注链接的容器 &ndash;&gt;-->
+<!--          {% for follow in site.footer.follow %} &lt;!&ndash; 遍历每个关注信息 &ndash;&gt;-->
+<!--          <div class="social-link"> &lt;!&ndash; 单个关注信息的容器 &ndash;&gt;-->
+<!--            {% assign follow_icon_path = "/assets/img/icons/" | append: follow.name | downcase | append: ".png" | absolute_url %} &lt;!&ndash; 生成关注图标的路径 &ndash;&gt;-->
+<!--            <img-->
+<!--                    src="{{ follow_icon_path }}" &lt;!&ndash; 关注图标的路径 &ndash;&gt;-->
+<!--            alt="{{ follow.name | downcase }}" &lt;!&ndash; 关注名称作为图片的提示文本 &ndash;&gt;-->
+<!--            />-->
+<!--            <a href="{{ follow.link }}"> &lt;!&ndash; 生成关注链接 &ndash;&gt;-->
+<!--              {% if follow.value and follow.value != "" and follow.value != nil %}-->
+<!--              {{ follow.value }} &lt;!&ndash; 如果有值，显示值 &ndash;&gt;-->
+<!--              {% else %}-->
+<!--              {{ follow.name }} &lt;!&ndash; 否则，显示名称 &ndash;&gt;-->
+<!--              {% endif %}-->
+<!--            </a>-->
+<!--          </div>-->
+<!--          {% endfor %}-->
+<!--        </div>-->
+<!--        {% endif %}-->
+<!--      </div>-->
+<!--      {% if site.footer.show_powered_by == true %} &lt;!&ndash; 如果需要显示“Powered by”的信息 &ndash;&gt;-->
+<!--      <div class="footer-col footer-col-3 powered-by"> &lt;!&ndash; 第三列，显示版权信息 &ndash;&gt;-->
+<!--        <p>-->
+<!--          powered by <a href="https://github.com/eliottvincent/bay">Bay</a> | <span id="year"></span> &lt;!&ndash; 显示版权信息和当前年份 &ndash;&gt;-->
+<!--        </p>-->
+<!--      </div>-->
+<!--      {% endif %}-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</footer>-->
+<!--{% include wechat-widget.html %} &lt;!&ndash; 包含 微信小工具的 HTML &ndash;&gt;-->
