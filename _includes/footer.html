@@ -39,7 +39,14 @@
                     {{ contact.value }}
                   </a>
                 {% endif %}
-              {% else %}
+
+
+                {% if contact.type == "phone" %}
+                {% assign phone_number = contact.link %}
+                <a href="tel:{{ contact.phone_number }}">Call</a>>
+                {% endif %}
+
+                {% else %}
                 <a href="{{ contact.link }}" id="{{ contact.type }}-link">
                   {% if contact.value and contact.value != "" and contact.value != nil %}
                     {{ contact.value }}

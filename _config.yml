@@ -13,7 +13,7 @@ header:
   pages:
     - name: Home
       slug: /
-    - name: Work
+    - name: Case
     - name: Blog
 
 footer:
@@ -23,28 +23,31 @@ footer:
       name: Email
       value: yourmail@domain.com
     - type: wechat
-      value: YourWeChatUsername
+      value: wxid_au60bei5rzi722
       link: "#"
+    - type: phone
+      name: phone
+      link: 0842906961
   follow:
-    - type: twitter
-      name: Twitter
-      link: http://twitter.com/YourTwitterUsername
-      username: "@YourTwitterUsername"
+#    - type: twitter
+#      name: Twitter
+#      link: http://twitter.com/YourTwitterUsername
+#      username: "@YourTwitterUsername"
     - type: facebook
       name: Facebook
-      link: http://facebook.com/YourFacebookUsername
-    - type: linkedin
-      name: LinkedIn
-      link: http://linkedin.com/in/YourLinkedInUsername
-    - type: github
-      name: GitHub
-      link: http://github.com/YourGitHubUsername
-    - type: dribbble
-      name: Dribbble
-      link: https://dribbble.com/YourDribbbleUsername
-    - type: rss
-      name: RSS
-      link: /feed.xml
+      link: http://facebook.com/juthatip104
+#    - type: linkedin
+#      name: LinkedIn
+#      link: http://linkedin.com/in/pang253618
+#    - type: github
+#      name: GitHub
+#      link: http://github.com/YourGitHubUsername
+#    - type: dribbble
+#      name: Dribbble
+#      link: https://dribbble.com/YourDribbbleUsername
+#    - type: rss
+#      name: RSS
+#      link: /feed.xml
 
 # Build settings
 markdown: kramdown
