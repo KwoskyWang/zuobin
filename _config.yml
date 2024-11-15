@@ -29,8 +29,8 @@ footer:
       value: wxid_au60bei5rzi722
       link: "#"
     - type: phone
-      name: phone
-      link: 0842906961
+      value: 0842906961
+#      link: 0842906961
   follow:
 #    - type: twitter
 #      name: Twitter
