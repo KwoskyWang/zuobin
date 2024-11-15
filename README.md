@@ -73,7 +73,7 @@ header:
   pages:
     - name: Home
       slug: /     # <-- index.md
-    - name: Blog  # <-- blog.md
+    - name: Blog  # <-- me.md
     - name: Whatever  # <-- whatever.md
 ```
 Re-run `jekyll serve` to see the header updated.
