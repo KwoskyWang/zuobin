@@ -22,6 +22,9 @@ footer:
 #    - type: email
 #      name: Email
 #      value: yourmail@domain.com
+    - type: line
+      value: pang253618
+      link: "#"
     - type: wechat
       value: wxid_au60bei5rzi722
       link: "#"
