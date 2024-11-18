@@ -4,7 +4,7 @@ theme: jekyll-theme-minimal
 title: Lover hunter
 description: >- # this means to ignore newlines until "baseurl:"
   Help you to find lover.
-baseurl: "/zuobin" # the subpath of the site
+baseurl: "/TravelCustomization" # the subpath of the site
 url: "https://kwoskywang.github.io" # the base hostname & protocol for the site
 og_image: /assets/img/double-heart.jpeg
 google_analytics: "UA-121636368-3"

@@ -6,7 +6,7 @@ profile_picture:
 ---
 
 <p>
-  You deserve to be loved. 
+  Welcome to Thailand! 🐘🐘🐘🙏🙏
 </p>
 <p>
   คุณสมควรได้รับความรัก. 
